@@ -358,7 +358,8 @@ app.use((req, res) => {
 // Start server
 async function start() {
   try {
-    await initDatabase();
+    // Tabelas criadas manualmente em Supabase
+    // initDatabase mantém compatibilidade local
     app.listen(PORT, () => {
       console.log(`\n✅ Servidor rodando em http://localhost:${PORT}`);
       console.log(`📊 Analytics: http://localhost:${PORT}/api/analytics`);
